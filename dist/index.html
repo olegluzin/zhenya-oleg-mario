@@ -2,23 +2,85 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="theme-color" content="#141d2e"><meta name="description" content="Один герой. Одна принцесса. Самое важное приключение. Помоги Олегу добраться до Жени в ретро-платформере.">
-  <title>Олег & Женя — Любовь с первого уровня</title>
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%23141d2e' d='M0 0h32v32H0z'/%3E%3Cpath fill='%23ff8050' d='M4 8h4V4h8v4h4V4h8v12h-4v4h-4v4h-4v4h-4v-4H8v-4H4z'/%3E%3C/svg%3E">
-  <link rel="stylesheet" href="style.css?v=touch-1">
+  <meta name="theme-color" content="#141d2e"><meta name="description" content="Личная браузерная игра-подарок в стиле ретро-платформеров. Два уровня: дорога к замку и московская прогулка. Играй на компьютере или телефоне.">
+  <title>Люблю Женёчка — браузерная игра Олег и Женя</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="canonical" href="https://zhenya.olegluzin.ru/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:site_name" content="Люблю Женёчка">
+  <meta property="og:title" content="Люблю Женёчка — браузерная игра Олег и Женя">
+  <meta property="og:description" content="Личная браузерная игра-подарок в стиле ретро-платформеров. Два уровня: дорога к замку и московская прогулка. Играй на компьютере или телефоне.">
+  <meta property="og:url" content="https://zhenya.olegluzin.ru/">
+  <meta property="og:image" content="https://zhenya.olegluzin.ru/assets/social-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Пиксельное сердце и название игры Люблю Женёчка">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Люблю Женёчка — браузерная игра Олег и Женя">
+  <meta name="twitter:description" content="Личная браузерная игра-подарок в стиле ретро-платформеров. Два уровня: дорога к замку и московская прогулка. Играй на компьютере или телефоне.">
+  <meta name="twitter:image" content="https://zhenya.olegluzin.ru/assets/social-card.png">
+  <meta name="twitter:image:alt" content="Пиксельное сердце и название игры Люблю Женёчка">
+  <link rel="stylesheet" href="style.css?v=seo-1">
 <script defer src="/metrika.js"></script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://zhenya.olegluzin.ru/#website",
+      "url": "https://zhenya.olegluzin.ru/",
+      "name": "Люблю Женёчка",
+      "inLanguage": "ru"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://zhenya.olegluzin.ru/#webpage",
+      "url": "https://zhenya.olegluzin.ru/",
+      "name": "Люблю Женёчка — браузерная игра Олег и Женя",
+      "description": "Личная браузерная игра-подарок в стиле ретро-платформеров. Два уровня: дорога к замку и московская прогулка. Играй на компьютере или телефоне.",
+      "inLanguage": "ru",
+      "isPartOf": {
+        "@id": "https://zhenya.olegluzin.ru/#website"
+      },
+      "mainEntity": {
+        "@id": "https://zhenya.olegluzin.ru/#game"
+      }
+    },
+    {
+      "@type": "VideoGame",
+      "@id": "https://zhenya.olegluzin.ru/#game",
+      "name": "Люблю Женёчка",
+      "alternateName": "Олег и Женя — Любовь с первого уровня",
+      "url": "https://zhenya.olegluzin.ru/",
+      "description": "Личная браузерная игра-подарок в стиле ретро-платформеров. Два уровня: дорога к замку и московская прогулка. Играй на компьютере или телефоне.",
+      "inLanguage": "ru",
+      "genre": "Платформер",
+      "gamePlatform": "Веб-браузер",
+      "isAccessibleForFree": true,
+      "image": "https://zhenya.olegluzin.ru/assets/social-card.png"
+    }
+  ]
+}
+  </script>
 </head>
 <body>
   <main class="arcade">
     <header class="page-header"><a class="brand" href="./" aria-label="Олег и Женя, главная">О<span class="pixel-heart" aria-hidden="true">♥</span>Ж<span class="brand-caption">САМОЕ ВАЖНОЕ ПРИКЛЮЧЕНИЕ</span></a><span class="edition" id="edition">WORLD 1—1 · ДЛЯ ДВОИХ</span></header>
+    <section class="game-intro" aria-labelledby="page-title">
+      <h1 id="page-title">Люблю Женёчка</h1>
+      <p>Личная браузерная игра-подарок в стиле ретро-платформеров. Два уровня: дорога к замку и московская прогулка. Играй на компьютере или телефоне.</p>
+    </section>
     <nav class="level-picker" aria-label="Выбор уровня"><button id="level-one" aria-pressed="true">1 · ДОРОГА К ЖЕНЕ</button><button id="level-two" aria-pressed="false">2 · МОСКОВСКИЕ ДЕЛА</button></nav>
     <div class="quests" id="quests" aria-label="Дела в Москве" hidden><span id="quest-dog">① Багет · прогулка</span><span id="quest-child">② Саша · в садик</span><span id="quest-zhenya">③ К Жене в замок</span></div>
+    <noscript><p class="js-note">Для запуска игры включи JavaScript в браузере. Описание игры и управление доступны ниже.</p></noscript>
     <section class="machine" aria-label="Игра: Олег спасает Женю">
       <div class="hud"><div class="stat"><span class="stat-label">ОЛЕГ</span><strong id="score">000000</strong></div><div class="stat coins"><span class="stat-label">МОНЕТЫ</span><strong><span class="coin-icon" aria-hidden="true">●</span> × <span id="coins">00</span></strong></div><div class="stat life"><span class="stat-label">ЖИЗНИ</span><strong id="lives" aria-label="3 жизни">♥ ♥ ♥</strong></div><div class="stat goal"><span class="stat-label">ДО ЖЕНИ</span><strong id="distance">100%</strong></div><div class="hud-actions"><button id="sound" class="icon-button" aria-label="Включить звук" aria-pressed="false" title="Звук">♪<span class="mute-slash">/</span></button><button id="pause" class="icon-button" aria-label="Пауза" title="Пауза" disabled>Ⅱ</button></div></div>
       <div class="screen" id="screen">
-        <canvas id="game" width="1120" height="560" role="img" aria-label="Пиксельный уровень с монетами, трубами и замком. Управление стрелками, пробелом или свайпами." tabindex="0"></canvas>
+        <canvas id="game" width="1120" height="560" role="img" aria-label="Пиксельный уровень с монетами, трубами и замком. Управление стрелками, пробелом или свайпами." tabindex="0">Игра «Люблю Женёчка»: ретро-платформер с двумя уровнями. Управление и описание находятся рядом с игровым полем.</canvas>
         <div class="screen-shade" id="shade"></div>
-        <div class="overlay" id="overlay"><div class="start-content"><span class="eyebrow" id="eyebrow">ОЛЕГ & ЖЕНЯ · WORLD 1—1</span><h1 id="message">ЛЮБОВЬ С<br><span>ПЕРВОГО УРОВНЯ</span></h1><p id="description">До счастья — всего один замок.</p><button class="play-button" id="play">НАЧАТЬ ПРИКЛЮЧЕНИЕ <span aria-hidden="true">▶</span></button><span class="start-hint" id="start-hint">или нажми Enter</span></div></div>
+        <div class="overlay" id="overlay"><div class="start-content"><span class="eyebrow" id="eyebrow">ОЛЕГ & ЖЕНЯ · WORLD 1—1</span><h2 id="message">ЛЮБОВЬ С<br><span>ПЕРВОГО УРОВНЯ</span></h2><p id="description">До счастья — всего один замок.</p><button class="play-button" id="play">НАЧАТЬ ПРИКЛЮЧЕНИЕ <span aria-hidden="true">▶</span></button><span class="start-hint" id="start-hint">или нажми Enter</span></div></div>
         <div class="game-toast" id="toast" role="status" aria-live="polite"></div>
         <span class="screen-label" id="screen-label">1—1 · ДОРОГА К ЖЕНЕ</span>
       </div>

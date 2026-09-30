@@ -1,0 +1,18 @@
+# Beget: also enable HTTP to HTTPS in the site settings (nginx serves static files).
+DirectoryIndex index.php
+Options -Indexes
+RewriteEngine On
+
+# Only explicit requests for index files redirect; DirectoryIndex must not loop.
+RewriteCond %{HTTP_HOST} ^(?:www\.)?zhenya\.olegluzin\.ru(?::[0-9]+)?$ [NC]
+RewriteCond %{THE_REQUEST} \s/+index\.(?:html|php)(?:[?\s]) [NC]
+RewriteRule ^index\.(?:html|php)$ https://zhenya.olegluzin.ru/ [R=301,L,NE]
+
+RewriteCond %{HTTP_HOST} ^www\.zhenya\.olegluzin\.ru(?::[0-9]+)?$ [NC]
+RewriteRule ^ https://zhenya.olegluzin.ru%{REQUEST_URI} [R=301,L,NE]
+
+# X-Forwarded-Proto is set by Beget's HTTPS proxy.
+RewriteCond %{HTTP_HOST} ^zhenya\.olegluzin\.ru(?::[0-9]+)?$ [NC]
+RewriteCond %{HTTPS} !=on
+RewriteCond %{HTTP:X-Forwarded-Proto} !^https$ [NC]
+RewriteRule ^ https://zhenya.olegluzin.ru%{REQUEST_URI} [R=301,L,NE]
