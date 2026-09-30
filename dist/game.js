@@ -133,7 +133,11 @@ function drawBaget(x,y,face){
  ctx.strokeStyle=dog.pulling||sniff?'#d4916b':'#dcc5a0';ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(handX,handY);
  if(dog.pulling||sniff)ctx.lineTo(x+24,y+23);else ctx.quadraticCurveTo((handX+x+24)/2,Math.max(handY,y+23)+12,x+24,y+23);ctx.stroke();
  drawCharacter('baget',x,y,40,DOG_HEIGHT,face,bounce,sniff?.12:happy?Math.sin(time*18)*.025:0);
- ctx.font='bold 10px monospace';ctx.fillStyle='#fff8df';ctx.fillText(sniff?'НЮХ-НЮХ':'БАГЕТ',Math.max(5,x-2),y-12);
+ if(sniff){
+  const fontSize=Math.max(14,Math.ceil(11*view/(canvas.clientWidth||view))),labelWidth=Math.ceil(fontSize*4.4)+12;
+  const labelX=Math.max(4,Math.min(view-labelWidth-4,Math.round(face>0?x+28-labelWidth:x+12))),labelY=Math.round(y)-fontSize-10;
+  rect(labelX,labelY,labelWidth,fontSize+6,'#172239');ctx.font='bold '+fontSize+'px Arial, sans-serif';ctx.fillStyle='#fff8df';ctx.fillText('Нюх-нюх',labelX+6,labelY+fontSize+1);
+ }else{ctx.font='bold 10px monospace';ctx.fillStyle='#fff8df';ctx.fillText('БАГЕТ',Math.max(5,x-2),y-12);}
  if(happy){ctx.fillStyle='#ffb0ac';ctx.font='15px Arial';ctx.fillText('♥',x+16,y-23+bounce);}
 }
 function drawSasha(x,y,face,atSchool=false){
